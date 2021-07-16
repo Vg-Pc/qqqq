@@ -1,0 +1,31 @@
+.text_menu {
+  font-weight: 500;
+}
+.button2 {
+  display: none;
+}
+.small_screen {
+  display: none;
+  z-index: 10;
+  position: absolute;
+}
+@media (max-width: 1313px) {
+  .small_screen {
+    display: unset;
+  }
+  .button2 {
+    display: unset;
+  }
+  .button1 {
+    display: none;
+  }
+  .text_menu {
+    display: none;
+  }
+}
+
+@media (max-width: 457px) {
+  .menu {
+    display: none;
+  }
+}
