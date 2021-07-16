@@ -1,10 +1,16 @@
-module.exports = function () {
-  return function (req, res, next) {
-    // getAlias would get an object {alias:"alias/path",source:"/real/path"} or null
-    const [alias, getAlias] = req.url;
-    if (alias) {
-      req.url = alias.source;
-    }
-    next();
-  };
-};
+var http = require("http");
+var express = require("express");
+
+var app = express();
+
+app.set("port", process.env.PORT || 5000);
+app.use(express.logger());
+
+app.get("/", function (request, response) {
+  console.log("[support dash] processing get request");
+  response.send("Hello World 2!");
+});
+
+app.listen(process.env.PORT, function () {
+  console.log("***** exp listening on port: " + process.env.PORT);
+});
