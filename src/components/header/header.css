@@ -8,10 +8,10 @@
   width: 100%;
 }
 .logo {
-  background-image: url(../../assets/HeaderLogo.png);
-  height: 35px;
+  background-image: url(../../assets/logoYoutube.png);
+  height: 40px;
   width: 106px;
-  background-size: contain;
+  background-size: cover;
 }
 .search {
   display: flex;

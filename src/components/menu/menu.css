@@ -1,7 +1,20 @@
+.logo {
+  background-image: url(../../assets/logoYoutube.png);
+  height: 40px;
+  width: 106px;
+  background-size: cover;
+  margin-left: 20px;
+}
+.text_drawer {
+  font-weight: 500;
+  font-size: medium;
+  color: black;
+  padding-top: 10px;
+}
 .text_menu {
   font-weight: 500;
 }
-.button2 {
+.button_drawer {
   display: none;
 }
 .small_screen {
@@ -13,10 +26,10 @@
   .small_screen {
     display: unset;
   }
-  .button2 {
+  .button_drawer {
     display: unset;
   }
-  .button1 {
+  .button_menu {
     display: none;
   }
   .text_menu {

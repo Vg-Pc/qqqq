@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import "./menu.css";
-import { Menu, Button, Collapse, Space, Drawer } from "antd";
+import { Menu, Button, Collapse, Space, Drawer, Switch } from "antd";
 import {
   HomeFilled,
   CompassFilled,
@@ -29,6 +29,7 @@ const MenuLeft = () => {
   //     setCollapsed(!collapsed);
   //   }
   // }, [size]);
+
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
@@ -46,7 +47,7 @@ const MenuLeft = () => {
   return (
     <div className="container">
       <div className="full_screen">
-        <div className="button1">
+        <div className="button_menu">
           <Button
             type="default"
             onClick={toggleCollapsed}
@@ -57,9 +58,9 @@ const MenuLeft = () => {
             )}
           </Button>
         </div>
-        <div className="button2">
+        <div className="button_drawer">
           <Button onClick={onOpen}>
-            <MenuFoldOutlined />
+            <MenuUnfoldOutlined />
           </Button>
         </div>
         <Menu
@@ -98,44 +99,52 @@ const MenuLeft = () => {
         </Menu>
       </div>
       <div className="small_screen">
-        {/* <Button onClick={onOpen}>
-          <MenuFoldOutlined />
-        </Button> */}
-
         <Drawer
-          icon={<MenuFoldOutlined />}
           placement={placement}
           closable={false}
           onClose={onClose}
           visible={visible}
           key={placement}
         >
+          <div
+            style={{
+              display: "flex",
+              flexFlow: "nowrap",
+              alignItems: "center",
+            }}
+          >
+            <Button onClick={onClose}>
+              <MenuFoldOutlined />
+            </Button>
+            <div className="logo"></div>
+          </div>
+
           <Link to="/main/home">
-            <div>
+            <div className="text_drawer">
               <HomeFilled />
               Home
             </div>
           </Link>
           <Link to="/main/explore">
-            <div>
+            <div className="text_drawer">
               <CompassFilled />
               Explore
             </div>
           </Link>
           <Link to="/main/subscriptions">
-            <div>
+            <div className="text_drawer">
               <PlaySquareFilled />
               Subscriptions
             </div>
           </Link>
           <Link to="/main/library">
-            <div>
+            <div className="text_drawer">
               <SnippetsFilled />
               Library
             </div>
           </Link>
           <Link to="/main/history">
-            <div>
+            <div className="text_drawer">
               {" "}
               <RedoOutlined />
               History
@@ -146,6 +155,5 @@ const MenuLeft = () => {
     </div>
   );
 };
-// }
 
 export default MenuLeft;
