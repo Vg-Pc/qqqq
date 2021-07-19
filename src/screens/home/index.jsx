@@ -4,7 +4,7 @@ import "./home.css";
 
 const listBlock = () => {
   let list = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 60; i++) {
     list.push({
       title: `Tên video #${i + 1}`,
       video: `Video nhân văn ${i + 1}`,

@@ -1,3 +1,6 @@
+.container {
+  background-color: white;
+}
 .logo {
   background-image: url(../../assets/logoYoutube.png);
   height: 40px;

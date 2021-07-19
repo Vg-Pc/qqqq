@@ -32,7 +32,7 @@ const MainNavigator = () => (
       style={{
         display: "flex",
         flexFlow: "nowrap",
-        justifyContent: "space-around",
+        backgroundColor: "whitesmoke",
       }}
     >
       <MenuLeft />

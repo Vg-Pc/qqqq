@@ -9,8 +9,8 @@
     rgb(154, 45, 231),
     violet
   );
-  width: 250px;
-  height: 130px;
+  width: 310px;
+  height: 170px;
 
   display: flex;
   align-items: center;
@@ -34,30 +34,43 @@
 }
 
 .list_home {
-  columns: 4 auto;
-  padding-top: 15px;
-  padding-inline: 20px;
-  background-color: rgb(238, 238, 238);
+  columns: 5 auto;
+  display: inline;
+  justify-content: space-around;
+  padding-top: 25px;
+  width: 90%;
+  padding-left: 40px;
 }
 
 .block_home {
-  padding-bottom: 40px;
-  height: 260px;
+  padding-bottom: 35px;
+  padding-right: 30px;
+}
+@media (max-width: 1789px) {
+  .list_home {
+    columns: 4 auto;
+    padding: 50px;
+  }
+}
+@media (max-width: 1535px) {
+  .label_home {
+    width: 250px;
+  }
 }
 
-@media (max-width: 1152px) {
+@media (max-width: 1280px) {
   .list_home {
     columns: 3 auto;
   }
 }
 
-@media (max-width: 912px) {
+@media (max-width: 980px) {
   .list_home {
     columns: 2 auto;
   }
 }
 
-@media (max-width: 652px) {
+@media (max-width: 705px) {
   .list_home {
     columns: 1 auto;
   }
