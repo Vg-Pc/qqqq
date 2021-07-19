@@ -45,3 +45,12 @@
     padding-left: 50px;
   }
 }
+
+@media (max-width: 477px) {
+  .button_search {
+    padding-left: 10px;
+  }
+  .search {
+    width: 30%;
+  }
+}
