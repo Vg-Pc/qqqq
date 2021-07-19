@@ -14,6 +14,10 @@ function Header() {
     setVisible(true);
   };
 
+  const showAudio = () => {
+    setVisible(true);
+  };
+
   const handleOk = () => {
     setVisible(false);
   };
@@ -39,9 +43,28 @@ function Header() {
             </Modal>
           </div>
           <div className="button_audio">
-            <Button type="text">
+            <Button type="text" onClick={showAudio}>
               <AudioFilled style={{ fontSize: "18px" }} />
             </Button>
+            <Modal
+              visible={visible}
+              onCancel={handleCancel}
+              footer={
+                <Button>
+                  <AudioFilled />
+                </Button>
+              }
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexFlow: "column",
+                  alignItems: "center",
+                }}
+              >
+                <h3>Tìm kiếm bằng giọng nói</h3>
+              </div>
+            </Modal>
           </div>
         </div>
         <Col>
