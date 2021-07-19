@@ -10,12 +10,13 @@ const { Search } = Input;
 const onSearch = (value) => console.log(value);
 function Header() {
   const [visible, setVisible] = useState(false);
+  const [isVisible, isSetVisible] = useState(false);
   const showModal = () => {
     setVisible(true);
   };
 
   const showAudio = () => {
-    setVisible(true);
+    isSetVisible(true);
   };
 
   const handleOk = () => {
@@ -39,6 +40,7 @@ function Header() {
               <SearchOutlined />
             </Button>
             <Modal visible={visible} onOk={handleOk} onCancel={handleCancel}>
+              <br />
               <Input placeholder="Search" allowClear onSearch={onSearch} />
             </Modal>
           </div>
@@ -47,8 +49,8 @@ function Header() {
               <AudioFilled style={{ fontSize: "18px" }} />
             </Button>
             <Modal
-              visible={visible}
-              onCancel={handleCancel}
+              visible={isVisible}
+              onCancel={() => isSetVisible(false)}
               footer={
                 <Button>
                   <AudioFilled />
